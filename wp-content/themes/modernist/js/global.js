@@ -1,0 +1,1 @@
+require.config({	"baseUrl": "/content/themes/modernist/js",	"paths": {		"jquery": "vendor/jquery/jquery",		"modules": "modules"	}});require(['jquery'], function($) {});
