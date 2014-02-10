@@ -1,0 +1,36 @@
+/* ****************************************************************************
+ * BASE STYLES                                                                *
+ **************************************************************************** */
+*,*:before,*:after {
+  @include box-sizing(border-box);
+}
+
+
+
+html {
+  	-webkit-font-smoothing: antialiased;
+  	font-smoothing: antialiased;
+  	text-rendering: optimizeLegibility;
+  	font-family: $body-font;
+  	font-weight: $normal-weight;
+	@include at-breakpoint($break-portrait-tablet) {
+		@include fontSize(18px);
+
+	}
+	@include at-breakpoint($break-screen) {
+		@include fontSize(16px);
+	}
+}
+
+
+
+/* ****************************************************************************
+ * LINKS                                                                      *
+ **************************************************************************** */
+a {
+	color: $link-color;
+	text-decoration: none;
+	&:hover {
+		color: $link-hover-color;
+	}
+}

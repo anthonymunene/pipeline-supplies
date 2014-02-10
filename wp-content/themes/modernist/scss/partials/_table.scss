@@ -1,0 +1,23 @@
+.table--price {
+	width: 100%;
+	td{
+		padding: 1rem;
+	}
+	th {
+		padding-bottom: 1rem;
+	}
+	p {
+		@include fontSize(17px);
+		font-weight: $bold-weight;
+		margin-bottom: 0;
+	}
+	.light--small {
+		font-weight: $normal-weight;
+	}
+	.fees {
+		p {
+			@extend .text--right;
+			font-weight: $normal-weight;
+		}
+	}
+}

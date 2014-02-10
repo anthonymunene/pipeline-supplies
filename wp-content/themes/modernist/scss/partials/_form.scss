@@ -1,0 +1,121 @@
+/**
+* @desc         Form Field classes.
+* @name         form
+* @author       username
+* @tested       N/A
+* @requires     toolkit/_colours.scss
+*/
+.form {
+	display: inline-block;
+}
+.form-field {
+	margin-bottom: 1.562rem;
+	line-height: 1.6em;
+	@include clearfix;
+	clear: both;
+}
+/**
+ *	Allows you to stack input blocks side by side
+*3*/
+.form-field--inline {
+	@extend .form-field;
+	clear: none;
+	float: left;
+	width: auto;
+}
+.form-field--inline-spaced-right {
+	@extend .form-field--inline;
+	margin-right: 15px;
+
+}
+.form-field--inline-spaced-left {
+	@extend .form-field--inline;
+	margin-left: 15px;
+}
+.form-field--submit {
+	@extend .form-field;
+	margin-top: 1.562rem;
+	button, input {
+		@include fontSize(14px);
+		font-weight: $bold-weight;
+		float: right;
+		text-transform: capitalize;
+	}
+}
+
+input {
+	background-color: $input-bg-colour;
+	border: 1px inset $input-border;
+	display: inline-block;
+	width: 16.87rem;
+}
+select {
+	xdisplay: inline-block;
+	float: left;
+	margin: 0 10px;
+	width: auto;
+}
+input[type="radio"], input[type="checkbox"]{
+	width: auto;
+	margin: 0 10px;
+}
+.input--xxsmall {
+	@extend input;
+	max-width: 2em;
+}
+.input--xsmall {
+	@extend input;
+	max-width: 4em;
+}
+.input--small {
+	@extend input;
+	max-width: 6em;
+}
+.input--fullwidth {
+	@extend input;
+	width: 100%;
+}
+
+/**
+ * By default form labels will be above inputs
+**/
+label {
+	text-align: left;
+}
+/**
+ * align labels with inputs
+**/
+
+.label--inline {
+	@extend label;
+	float: left;
+	width: 8.5rem;
+}
+.label--inline-right{
+	@extend .label--inline;
+	float: right;
+}
+.label--block {
+	@extend label;
+	display: block;
+}
+.label--textarea--block {
+	@extend .label--block;
+	margin-bottom: 1.562rem;
+}
+textarea {
+	width: 98%;
+	float: left;
+}
+
+
+/*------------------------------------*\
+    form validations
+\*------------------------------------*/
+.form-field--error {
+	@extend .form-field;
+	background-color: #fef7f7;
+	border-left: 3px solid #df3034;
+ 	margin: 0 -1em 0.5em -1em;
+ 	padding: 0.75em 1em 1em 1em;
+}

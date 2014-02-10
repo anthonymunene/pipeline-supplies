@@ -1,0 +1,40 @@
+header , footer {
+	background-color: $white;
+	 width: auto;
+	 position: relative;
+	 display: block;
+}
+header {
+	margin-top: 40px;
+	.logo {
+		float: left;
+		width: 130px;
+		height: 79px;
+		background: url(http://pipeline.anthonymunene.com/wp-content/uploads/2014/02/logo-standard.jpg);
+	}
+}
+.navigation {
+	display: inline-block;
+	margin-left: 60px;
+	li {
+		display: inline-block;
+		margin-top: 36px;
+	}
+}
+.navigation--mobile {
+	display: none;
+}
+
+.inner-content {
+	width: 980px;
+	position: relative;
+	padding: 30px;
+	margin: 0 auto;
+}
+.site-background {
+	background:url(/wp-content/themes/modernist/images/backgrounds/site-bg.jpg);
+	background-size: cover;
+	position: fixed;
+	width: 100%;
+	height: 100%;
+}

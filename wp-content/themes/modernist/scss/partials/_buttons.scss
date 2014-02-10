@@ -1,0 +1,52 @@
+/**
+* @desc         button classes.
+* @name         buttons
+* @author       Anthony Munene
+* @tested       N/A
+* @requires     [
+					toolkit/_colours.scss,
+					toolkit/_typography.scss,
+					toolkit/design-patterns/_buttons.scss
+				]
+*/
+button, .button {
+	@include fontSize(20px);
+	@include border-radius(1px);
+	@include min-width(7.437rem);
+	background-color: $button-colour;
+	color: $white;
+	display:inline-block;
+	padding: 0 1.25rem 0.125rem 1.25rem;
+	text-transform: uppercase;
+	text-align: center;
+	margin: 0.7rem 0.5rem 0 0.5rem;
+}
+.button--small {
+	@extend .button;
+	@include fontSize(14px);
+	padding: 0.15em 0 0.15em 0;
+	@include min-width(5.7rem);
+	line-height: 1rem;
+}
+.button--gray {
+	@extend .button;
+	background-color: $nobel;
+	color: $dark-grey;
+}
+
+
+.upload-button--header {
+	@extend .button--gray;
+	@include min-width(0);
+	@include fontSize(13px);
+	background-color: $gray;
+	color: $white;
+	width: auto;
+	float: left;
+	padding: 0 1.12rem;
+	margin: 0.2rem 0 0 0;
+}
+.upload-button--form {
+	@extend .button--small;
+	@include min-width(4.7rem);
+}

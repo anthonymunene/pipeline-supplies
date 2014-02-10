@@ -1,0 +1,110 @@
+/**
+ * Typography Variables Partial
+ * This file is in charge of defining all typography related variables, property declarations and font face
+ */
+
+/**
+ * @font-face declarations here
+ */
+
+
+
+
+/**
+ * Font stacks
+ */
+//$header-font: "Open Sans", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+$body-font: "robotoregular";
+//$code-font: "Source Code Pro", "Menlo", Monospace;
+
+/**
+ * Weights of used fonts
+ */
+$light-weight: 300;
+$normal-weight: 400;
+$bold-weight: 700;
+
+
+/**
+ * Compass Vertical Rhythm setup
+ */
+$base-font-size: 16px;
+$base-line-height: 24px; // lineheight = font size * 1.618 ( Golden Ratio )
+@include establish-baseline;
+// base line height multiplier
+$blh: 1.8;
+
+$h1-font-size: 31px;
+$h2-font-size: 23px;
+$h3-font-size: 23px;
+$h4-font-size: 20px;
+$h5-font-size: 16px;
+$h6-font-size: 14px;
+$meta-font-size: 12px;
+
+// Line heights can be derived from Compass Vertical Rhythm. Otherwise, use these:
+
+$h1-line-height: 34px;
+$h2-line-height: 24px;
+$h3-line-height: 24px;
+$h4-line-height: 20px;
+$h5-line-height: 16px;
+$h6-line-height: 14px;
+$meta-line-height: 12px;
+
+$body-size: 1rem;
+$meta-size: 0.75rem;
+
+h1{
+	@include fontSize($h1-font-size);
+	line-height: $h1-line-height;
+	font-weight: $normal-weight;
+
+}
+h2{
+	@include fontSize($h2-font-size);
+	line-height: $h2-line-height;
+	font-weight: $normal-weight;
+}
+h3{
+	@include fontSize($h3-font-size);
+	line-height: $h3-line-height;
+	font-weight: $normal-weight;
+}
+h4 {
+	@include fontSize($h4-font-size);
+	line-height: $h3-line-height;
+	font-weight: $normal-weight;
+}
+h1, h2, h3, h4, h5 {
+	color: $header-color;
+	text-transform: uppercase;
+}
+
+p {
+	text-align: left;
+	color: #525252;
+	padding: 0;
+	margin-top: 0;
+
+}
+.p-14 {
+	@include fontSize(14px);
+}
+.h1-heading {
+	@extend h1;
+}
+.h2-heading {
+	@extend h2;
+}
+.h3-heading {
+	@extend h3;
+}
+.h4-heading {
+	@extend h4;
+}
+
+.light--weight {
+	font-weight: $light-weight !important;
+
+}
